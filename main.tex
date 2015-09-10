@@ -12,13 +12,34 @@
 \newpage
 
 %%TODO
-	
+\section*{Problemformulering}
+Målet med uppgiften är att ta det givna enborten A-B i figur \ref{fig:original} och förenkla det till dess Theveninekvivalenta eller Nortonekvivalenta motsvarighet, se \fig{}. För att åstakomma detta får Ohms lag, KCL, KVL samt slinganalys, nodanalys eller metoden med incidensmatriser användas.
+
+\section*{Lösning}
+Problemet löses med hjälp av slinganalys.
+
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\textwidth]{bilder/originalnat.eps}
+\includegraphics[width=1\textwidth]{bilder/originalnat.eps}
 \caption{Nät givet i uppgiften.}
 \label{fig:original}
 \end{figure}
+
+Föränklar bort R2 ty i serie med strömkällan I02. Förenklar bort den ensamma strömkällan I02. Sätter in strömmar i de slingor som uppstår, se \fig{fig:modnat}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\textwidth]{bilder/modnat.eps}
+\caption{Nät efter förenklingar, med angivna slingor och strömmar.}
+\label{fig:modnat}
+\end{figure}
+
+KVL annvänds på samtliga slingor detta ger ekvation \ref{ekv:KVLrough}
+
+\begin{equation}
+V=\sqrt{0.159g\lambda+6.2\frac{\gamma}{\rho\lambda}}
+\label{ekv:KVLrough}
+\end{equation}
 
 \end{document}
 

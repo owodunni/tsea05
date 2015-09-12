@@ -35,19 +35,48 @@ KVL annvänds på samtliga slingor detta ger ekvation \ref{ekv:I1}.
 
 \begin{equation}
 \text{I1: }-R_7(I_1+I_3)-R_4(I_1-I_2)-R_6(I_1-I_2+I_{02})-R_9(I_1-I_4)=0 \\
-\text{I2: }-R_1I_2-R_8(I_2-I_{02})-R_6(I_2-I_1-I_{02})-R_4(I_2-I_1)-R_3(I_2-I_{01}+I_3)+E_1=0 \\
-\text{I3: }-R_3(I_3+I_2-I_{02})-R_7(I_3+I_1)-R_8I_3=0 \\
-\text{I4: }-R_1(I_2)-R_8(I_2-I_{02})-R_6(I_2-I_1-I_{02})-R_4(I_2-I_1)-R_3(I_2-I_{01}+I_3)+E_1=0 \\
-\label{ekv:KVLrough}
+\label{ekv:I1}
 \end{equation}
 
-Genom att förenkla ekvation \ref{ekv:I1} - \ref{ekv:I3} till matris form, se ekvation så kan strömmarna bestämmas.
+\begin{equation}
+\text{I2: }-R_1I_2-R_8(I_2-I_{02})-R_6(I_2-I_1-I_{02})-R_4(I_2-I_1)-R_3(I_2-I_{01}+I_3)+E_1=0 \\
+\label{ekv:I2}
+\end{equation}
 
 \begin{equation}
-7=2
-\label{ekv:KVLmatrix}
+\text{I3: }-R_3(I_3+I_2-I_{02})-R_7(I_3+I_1)-R_8I_3=0 \\
+\label{ekv:I3}
+\end{equation}
+
+\begin{equation}
+\text{I4: }-R_1(I_2)-R_8(I_2-I_{02})-R_6(I_2-I_1-I_{02})-R_4(I_2-I_1)-R_3(I_2-I_{01}+I_3)+E_1=0 \\
+\label{ekv:I4}
+\end{equation}
+
+Genom att förenkla ekvation \ref{ekv:I1} - \ref{ekv:I4} till matris form, se ekvation \ref{ekv:Imatrix}, så kan strömmarna beräknas.
+
+\begin{equation}
+\begin{pmatrix}
+   -R_4-R_7-R_6-R_9 & R_4+R_6 &  \\
+  2 & -4 & 3 & 5 \\
+  2 & 3 & 4 & 6 \\
+  2 & 43 & 12 & 12 \\
+  1 & 1 & 0 & 8
+ \end{pmatrix}
+ \begin{pmatrix}
+    I1 \\
+    I2 \\
+    I3 \\
+    I4
+  \end{pmatrix}
+ =
+ \begin{pmatrix}
+    I1 \\
+    I2 \\
+    I3 \\
+    I4
+  \end{pmatrix}
+\label{ekv:Imatrix}
 \end{equation}
 
 \end{document}
-
-

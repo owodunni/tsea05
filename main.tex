@@ -49,7 +49,7 @@ KVL annvänds på samtliga slingor detta ger ekvation \ref{ekv:I1}.
 \end{equation}
 
 \begin{equation}
-\text{I4: }-R_1(I_2)-R_8(I_2-I_{02})-R_6(I_2-I_1-I_{02})-R_4(I_2-I_1)-R_3(I_2-I_{01}+I_3)+E_1=0 \\
+\text{I4: }-R_9(I_4-I_1)-R_{10}I_4-E_2=0 \\
 \label{ekv:I4}
 \end{equation}
 
@@ -57,11 +57,10 @@ Genom att förenkla ekvation \ref{ekv:I1} - \ref{ekv:I4} till matris form, se ek
 
 \begin{equation}
 \begin{pmatrix}
-   -R_4-R_7-R_6-R_9 & R_4+R_6 &  \\
-  2 & -4 & 3 & 5 \\
-  2 & 3 & 4 & 6 \\
-  2 & 43 & 12 & 12 \\
-  1 & 1 & 0 & 8
+  -R_4-R_7-R_6-R_9 & R_4+R_6 & -R_7 & R_9\\
+   R_6 R_4 & -R_1-R_8-R_6-R_4-R_3 & -R_3 & 0 \\
+  -R_7 & -R_3 & -R_3-R_7-R_8 & 0 \\
+   R_9 & 0 & 0 & -R_{10}
  \end{pmatrix}
  \begin{pmatrix}
     I1 \\
@@ -71,10 +70,10 @@ Genom att förenkla ekvation \ref{ekv:I1} - \ref{ekv:I4} till matris form, se ek
   \end{pmatrix}
  =
  \begin{pmatrix}
-    I1 \\
-    I2 \\
-    I3 \\
-    I4
+    R_6I_{02} \\
+    R_8I_{02}-R_3I_{01}-E_1 \\
+    -R_3I_{02} \\
+    E_2
   \end{pmatrix}
 \label{ekv:Imatrix}
 \end{equation}
